@@ -1,1 +1,2 @@
-# spheros_world_cup
+# Spheros world cup
+
