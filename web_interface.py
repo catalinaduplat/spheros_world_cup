@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import cv2
 import matplotlib.pyplot as plt
 from img_recognitizon import get_coords
 from parameters_estimator import get_parameters
@@ -9,6 +10,20 @@ from parameters_estimator import get_parameters
 st.title("Welcome to Spheros World Cup")
 
 st.sidebar.header("Spheros World Cup")
+# img_file_buffer = st.camera_input("Take a picture")
+# bytes_data = img_file_buffer.getvalue()
+#if img_file_buffer is not None:
+    # To read image file buffer with OpenCV:
+    #bytes_data = img_file_buffer.getvalue()
+    #cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
+
+    # Check the type of cv2_img:
+    # Should output: <class 'numpy.ndarray'>
+    #st.write(type(cv2_img))
+
+    # Check the shape of cv2_img:
+    # Should output shape: (height, width, channels)
+    #st.write(cv2_img.shape)
 
 # If the user selects "View teams", show a list of all the teams in the tournament.
 # if st.sidebar.checkbox("View teams"):
@@ -21,7 +36,8 @@ st.sidebar.header("Spheros World Cup")
 # Show map
 header_coords = st.header("Get initial positions of spheros")
 
-coords_sphero, coords_obstacles, dimensions, image_bytes_rect, image_bytes_sphero= get_coords('img/test_final.jpg')
+#coords_sphero, coords_obstacles, dimensions, image_bytes_rect, image_bytes_sphero= get_coords(bytes_data)
+coords_sphero, coords_obstacles, dimensions, image_bytes_rect, image_bytes_sphero= get_coords("img/test_final.jpg")
 
 st.text("Sphero 1 coor x: " +str(coords_sphero[0][0]))
 st.text("Sphero 1 coor y: " +str(coords_sphero[0][1]))

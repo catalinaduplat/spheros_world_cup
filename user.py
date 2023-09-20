@@ -4,10 +4,13 @@ from move_interface import AdiSphero
 sphero = AdiSphero("SM-1D91")
 
 # Test sphero connection
-sphero.init_sphero()
+# sphero.init_sphero()
 
 # Orient sphero
-# sphero.orient_to_front(90)
+orientation_angle = 0
+# sphero.orient_to_front(orientation_angle)
 
 # Move sphero
-# sphero.move_sphero(heading=-1, distance=15)
+calculator_angle = 0
+calculator_distance = 40
+sphero.move_sphero(orientation_angle, heading=calculator_angle, distance=calculator_distance)

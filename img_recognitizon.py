@@ -6,7 +6,8 @@ from spherov2.sphero_edu import SpheroEduAPI
 from spherov2.types import Color
 
 def get_coords(image:str):
-
+#def get_coords(bytes_data):
+    #image= cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
     image= cv2.imread(image)
     dimensions=image.shape
     print('Image Dimension    : ',dimensions)
