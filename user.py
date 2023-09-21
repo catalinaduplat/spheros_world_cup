@@ -1,7 +1,7 @@
 from move_interface import AdiSphero
 
 ## Set your sphero name
-sphero = AdiSphero("SM-1D91")
+sphero = AdiSphero("DEVICE-NAME")
 
 ## Test sphero connection: Run this if you want to test the connection to your sphero
 # sphero.init_sphero()
