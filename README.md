@@ -24,10 +24,6 @@ To get started with the project, follow these steps:
 
 4. Take soccer field image with webcam LogiTech C920
 
-   ```sh
-   streamlit run web_interface.py
-   ```
-
 5. Create sphero path with calculator and run code
 
    ```sh
