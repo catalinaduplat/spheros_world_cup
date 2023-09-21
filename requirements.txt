@@ -3,3 +3,4 @@ opencv-python==4.8.0.76
 opencv-python-rolling==5.0.0.20221015
 spherov2==0.12
 streamlit==1.26.0
+bleak==0.21.0
