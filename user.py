@@ -3,14 +3,12 @@ from move_interface import AdiSphero
 ## Set your sphero name
 sphero = AdiSphero("SM-1D91")
 
-## Test sphero connection: Run this if you want to 
-# test the connection to your sphero
+## Test sphero connection: Run this if you want to test the connection to your sphero
 # sphero.init_sphero()
 
 ## Orient sphero:
-# TODO: Run orient_sphero() if you want to know where the sphero is pointing at
-# TODO: Change orientation_angle to get your "0" orientation relative to the 
-# sphero and the court
+# TODO: Run orient_sphero() if you want to know where the sphero is pointing at.
+# TODO: Change orientation_angle to get your 0° orientation relative to the sphero and field
 orientation_angle = 0
 def orient_sphero():
     sphero.orient_to_front(orientation_angle)
