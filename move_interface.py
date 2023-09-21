@@ -12,15 +12,20 @@ class AdiSphero:
         with SpheroEduAPI(toy) as droid:
             droid.set_main_led(Color(r=0, g=0, b=255))
             return droid
-
-    def _move(self, heading: int, duration: float):        
-        toy = scanner.find_toy(toy_name=self.name)
-        with SpheroEduAPI(toy) as droid:
-            droid.set_main_led(Color(r=0, g=0, b=255))
-            droid.roll(heading=heading, speed =5, duration=duration)
-            print(droid.get_distance())
     
     def orient_to_front(self, desired_orientation: int):
+        """Sets the brightness of the back aiming LED for 10 seconds and
+        adjusts the position of the sphero to the defined angle.
+        
+        Take into consideration:
+        If the tail light is facing you, then 0° is forward, 90° is right,
+        270° is left, and 180° is backward
+
+        Parameters
+        ----------
+        desired_orientation : int
+            Angle in degrees
+        """
         toy = scanner.find_toy(toy_name=self.name)
         with SpheroEduAPI(toy) as droid:
             droid.set_back_led(255)
@@ -48,6 +53,16 @@ class AdiSphero:
         return duration
 
     def move_sphero(self, orientation_angle: int, heading: int, distance: float):
+        """
+        Parameters
+        ----------
+        orientation_angle : int
+            Angle that orients the Sphero at 0 relative to the field and its position.
+        heading : int
+            Angle the sphero should be moved to. It is given by the calculator
+        distance : float
+            Distance we want the Sphero to travel. It is given by the calculator.
+        """
         toy = scanner.find_toy(toy_name=self.name)
         with SpheroEduAPI(toy) as droid:
             droid.set_main_led(Color(r=0, g=0, b=255))

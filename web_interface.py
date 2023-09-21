@@ -1,7 +1,4 @@
 import streamlit as st
-import numpy as np
-import cv2
-import matplotlib.pyplot as plt
 from img_recognitizon import get_coords
 from parameters_estimator import get_parameters
 # from img_recognitizon import get_coords

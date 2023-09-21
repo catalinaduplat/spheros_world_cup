@@ -1,16 +1,29 @@
 from move_interface import AdiSphero
 
-# Set your sphero name
+## Set your sphero name
 sphero = AdiSphero("SM-1D91")
 
-# Test sphero connection
+## Test sphero connection: Run this if you want to 
+# test the connection to your sphero
 # sphero.init_sphero()
 
-# Orient sphero
+## Orient sphero:
+# TODO: Run orient_sphero() if you want to know where the sphero is pointing at
+# TODO: Change orientation_angle to get your "0" orientation relative to the 
+# sphero and the court
 orientation_angle = 0
-# sphero.orient_to_front(orientation_angle)
+def orient_sphero():
+    sphero.orient_to_front(orientation_angle)
 
-# Move sphero
-calculator_angle = 0
-calculator_distance = 40
-sphero.move_sphero(orientation_angle, heading=calculator_angle, distance=calculator_distance)
+## Move sphero:
+# TODO: Create your sphero path for soccer field 1
+def move_sphero_field1():
+    sphero.move_sphero(orientation_angle, heading=0, distance=0)
+
+# TODO: Create your sphero path for soccer field 2
+def move_sphero_field2():
+    sphero.move_sphero(orientation_angle, heading=0, distance=0)
+
+# TODO: Create your sphero path for soccer field 3
+def move_sphero_field3():
+    sphero.move_sphero(orientation_angle, heading=0, distance=0)
